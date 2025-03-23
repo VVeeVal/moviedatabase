@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import org.w3c.dom.Text;
-
+//Class with getters
 public class MovieViewHolder extends RecyclerView.ViewHolder {
     TextView textView;
     TextView title;

@@ -12,7 +12,8 @@ import com.example.moviedatabaseapp.MovieViewHolder;
 import com.example.moviedatabaseapp.R;
 
 import java.util.List;
-
+//stores the displayed movies, needed for the recyclerview
+// https://www.geeksforgeeks.org/android-recyclerview/
 public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     private List<Movie> movieList;
     private Context context;
@@ -25,8 +26,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieViewHolder> {
     @NonNull
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.movie, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie, parent, false);
         return new MovieViewHolder(view);
     }
 

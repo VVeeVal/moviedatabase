@@ -1,5 +1,5 @@
 package com.example.moviedatabaseapp;
-
+//just a class with getters
 public class Movie {
     String title;
     Integer year;

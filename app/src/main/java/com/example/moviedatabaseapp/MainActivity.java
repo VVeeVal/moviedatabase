@@ -23,23 +23,22 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //initializing needed elements and constructing classes
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         recyclerView = findViewById(R.id.RecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Initialize movie list BEFORE setting adapter
         movieList = new ArrayList<>();
         jsonLoader = new JsonLoader();
         Context context = this;
         movieList = JsonLoader.loadMovies(context);
 
-        // Initialize adapter and attach it to RecyclerView
         adapter = new MovieAdapter(movieList, this);
-        recyclerView.setAdapter(adapter); // 🚀 This must be done before layout is drawn
+        recyclerView.setAdapter(adapter);
 
-        // Debugging check
         if (adapter == null) {
             Log.e("MainActivity", "Adapter is null!");
         }
